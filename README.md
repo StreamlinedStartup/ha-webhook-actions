@@ -9,25 +9,13 @@ Send HTTP requests from Home Assistant automations. Use templates to insert real
 
 ## Installation
 
-### Via HACS
-
-1. Open HACS
-2. Click Integrations
-3. Click three dots (top right)
-4. Select Custom repositories
-5. Add repository URL
-6. Select Integration category
-7. Click Add
-8. Search "Webhook Actions"
-9. Click Install
-10. Restart Home Assistant
-
-### Manual Install
-
-1. Download latest release
+1. Download latest release from GitHub
 2. Extract files
-3. Copy `custom_components/webhook_actions` to your config folder
+3. Copy `custom_components/webhook_actions` folder to your Home Assistant `config/custom_components/` directory
 4. Restart Home Assistant
+5. Go to Settings → Devices & Services
+6. Click Add Integration
+7. Search for "Webhook Actions"
 
 ## Setup
 
