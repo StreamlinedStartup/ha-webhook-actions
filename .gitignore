@@ -1,0 +1,71 @@
+# Development scripts
+*.sh
+sync-to-ha.sh
+watch-and-sync.sh
+
+# Development environment
+.claude/
+.vscode/
+.idea/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual environments
+venv/
+ENV/
+env/
+.venv
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+
+# IDE
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.bak
+*.backup
+
+# Secrets (just in case)
+secrets.yaml
+*.key
+*.pem
+
+# Home Assistant config (if testing locally)
+.storage/
+home-assistant.log
+home-assistant_v2.db
+
+# Development docs (personal notes)
+DEVELOPMENT.md

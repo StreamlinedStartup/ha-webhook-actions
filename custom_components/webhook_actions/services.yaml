@@ -1,0 +1,59 @@
+call:
+  name: Call Webhook
+  description: Execute a configured webhook with optional parameter overrides
+  fields:
+    webhook_id:
+      name: Webhook ID
+      description: The ID of the webhook to execute
+      required: true
+      example: "notify_discord"
+      selector:
+        text:
+    url_override:
+      name: URL Override
+      description: Optional URL to override the configured webhook URL (supports templates)
+      required: false
+      example: "https://example.com/webhook/{{ now().hour }}"
+      selector:
+        text:
+    headers_override:
+      name: Headers Override
+      description: Optional headers to add or override (supports templates in values)
+      required: false
+      example: '{"Authorization": "Bearer {{ states(''sensor.api_token'') }}"}'
+      selector:
+        object:
+    payload_override:
+      name: Payload Override
+      description: Optional payload to override the configured payload (supports templates)
+      required: false
+      example: '{"message": "Temperature is {{ states(''sensor.temperature'') }}°C"}'
+      selector:
+        object:
+    timeout:
+      name: Timeout
+      description: Optional timeout in seconds to override the configured timeout
+      required: false
+      example: 30
+      selector:
+        number:
+          min: 1
+          max: 300
+          unit_of_measurement: "seconds"
+  response:
+    status_code:
+      description: HTTP status code from the webhook response
+      type: integer
+      example: 200
+    headers:
+      description: Response headers from the webhook
+      type: dict
+      example: '{"content-type": "application/json"}'
+    body:
+      description: Response body as text
+      type: string
+      example: '{"success": true}'
+    json:
+      description: Parsed JSON response (if applicable)
+      type: dict
+      example: '{"success": true, "id": "123"}'

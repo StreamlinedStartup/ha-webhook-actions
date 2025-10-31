@@ -1,0 +1,63 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Add Webhook",
+        "description": "Configure a new webhook action",
+        "data": {
+          "webhook_id": "Webhook ID",
+          "name": "Name",
+          "url": "URL",
+          "method": "HTTP Method",
+          "headers": "Headers (JSON)",
+          "payload": "Payload (JSON)",
+          "timeout": "Timeout (seconds)",
+          "retry_attempts": "Retry Attempts"
+        },
+        "data_description": {
+          "webhook_id": "Unique identifier for this webhook (used in service calls)",
+          "name": "Friendly name for this webhook",
+          "url": "The webhook URL to call (supports templates)",
+          "method": "HTTP method to use",
+          "headers": "Custom headers as JSON object (supports templates in values)",
+          "payload": "Request payload as JSON object or string (supports templates)",
+          "timeout": "Request timeout in seconds",
+          "retry_attempts": "Number of retry attempts on failure"
+        }
+      }
+    },
+    "error": {
+      "webhook_id_exists": "A webhook with this ID already exists",
+      "invalid_url": "Please enter a valid HTTP or HTTPS URL"
+    },
+    "abort": {
+      "already_configured": "This webhook is already configured"
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Edit Webhook",
+        "description": "Update webhook configuration\n\nWebhook ID: **{webhook_id}**\n(Use this ID in your automations with the `webhook_actions.call` service)",
+        "data": {
+          "name": "Name",
+          "url": "URL",
+          "method": "HTTP Method",
+          "headers": "Headers (JSON)",
+          "payload": "Payload (JSON)",
+          "timeout": "Timeout (seconds)",
+          "retry_attempts": "Retry Attempts"
+        },
+        "data_description": {
+          "name": "Friendly name for this webhook",
+          "url": "The webhook URL to call (supports templates)",
+          "method": "HTTP method to use",
+          "headers": "Custom headers as JSON object (supports templates in values)",
+          "payload": "Request payload as JSON object or string (supports templates)",
+          "timeout": "Request timeout in seconds",
+          "retry_attempts": "Number of retry attempts on failure"
+        }
+      }
+    }
+  }
+}

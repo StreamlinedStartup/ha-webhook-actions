@@ -1,0 +1,13 @@
+{
+  "domain": "webhook_actions",
+  "name": "Webhook Actions",
+  "codeowners": ["Vincent Termini"],
+  "config_flow": true,
+  "dependencies": [],
+  "documentation": "https://github.com/vulturestudio/ha-webhook-actions",
+  "integration_type": "service",
+  "issue_tracker": "https://github.com/vulturestudio/ha-webhook-actions/issues",
+  "iot_class": "cloud_push",
+  "requirements": [],
+  "version": "1.0.0"
+}
