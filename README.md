@@ -372,8 +372,8 @@ data:
 
 ## Support
 
-- Issues: https://github.com/vulturestudio/ha-webhook-actions/issues
-- Discussions: https://github.com/vulturestudio/ha-webhook-actions/discussions
+- Issues: https://github.com/StreamlinedStartup/ha-webhook-actions/issues
+- Discussions: https://github.com/StreamlinedStartup/ha-webhook-actions/discussions
 
 ## License
 
